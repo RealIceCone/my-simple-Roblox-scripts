@@ -1,0 +1,27 @@
+-- Place in StarterCharacterScripts and make sure it's a local script!
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local normalSpeed = 16 -- speed to go back to when you stop moving
+local maxSpeed =  30 -- the max speed it can go to
+local increasedSpeed = 2 -- the speed increase when you jump
+
+local function increaseSpeed()
+	if humanoid.WalkSpeed < maxSpeed then
+		humanoid.WalkSpeed = math.min(humanoid.WalkSpeed + increasedSpeed, maxSpeed)
+	end
+end
+
+local function resetSpeed()
+	humanoid.WalkSpeed = normalSpeed
+end
+
+humanoid.Jumping:Connect(increaseSpeed)
+
+humanoid.Running:Connect(function(speed)
+	if speed == 0 then
+		resetSpeed()
+	end
+end)
+-- this script gives the player more speed when they jump! it also makes the player go back to normal when they stop moving! no need to keep jumping when your speed is 30.
