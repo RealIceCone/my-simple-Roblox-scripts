@@ -1,1 +1,1 @@
-here i make simple scripts for Roblox. you can use all the scripts and no need to credit me or anything.
+ever wanted to go faster when you jump? or add music to your game? well this is the place for you!
