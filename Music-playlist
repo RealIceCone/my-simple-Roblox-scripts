@@ -2,7 +2,7 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local SoundService = game:GetService("SoundService")
 
--- Create a folder in ReplicatedStorage to store the music playlist and put all your sounds/music in the folder!
+
 local musicFolder = Instance.new("Folder")
 musicFolder.Name = "MusicPlaylist"
 musicFolder.Parent = ReplicatedStorage
@@ -11,7 +11,7 @@ musicFolder.Parent = ReplicatedStorage
 local musicList = {
 	9048375035, -- Example music asset ID 1
 	1837768517, -- Example music asset ID 2
-	1840684529, -- Example music asset ID 3 Only change the IDs in the script! nothing else!
+	1840684529, -- Example music asset ID 3 Only change the IDs in the script! nothing else! 
 	1841647093, -- Example music asset ID 4
 	1841998846, -- Example music asset ID 5
 	1846458016, -- Example music asset ID 6 you can add more music than 6 here is how: add new row under this one. and paste this in: 0,    --replace the 0 with the sound Id!
